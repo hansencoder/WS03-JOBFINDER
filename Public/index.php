@@ -1,26 +1,19 @@
 <?php
+    define('BASE_PATH', dirname(__DIR__));
 
-require_once __DIR__ . '/../helpers.php';
+    require BASE_PATH . '/vendor/autoload.php';
+    require BASE_PATH . '/helpers.php';
 
-$routes = [
-    '/' => 'Controllers/home.php',
-    '/listings' => 'Controllers/listings/index.php',
-    '/listings/create' => 'Controllers/listings/create.php',
-    '404' => 'Controllers/error/404.php'
-];
+    use Framework\Router;
+    use Framework\Session;
 
-$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    Session::start();
 
-// remove /WS03/Public from the URI
-$basePath = '/WS03/Public';
-if (str_starts_with($uri, $basePath)) {
-    $uri = substr($uri, strlen($basePath));
-}
+    $router = new Router();
+    $routes = require basePath('routes.php');
 
-$uri = $uri ?: '/';
+    $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    $method = $_SERVER['REQUEST_METHOD'];
 
-if (array_key_exists($uri, $routes)) {
-    require basePath($routes[$uri]);
-} else {
-    require basePath($routes['404']);
-}
+    $router->route($uri, $method);
+?>

@@ -1,0 +1,17 @@
+{
+    "name": "hansflores/ws03-php",
+    "description": "Job Listing PHP Project",
+    "authors": [
+        {
+            "name": "Hans Flores",
+            "email": "hansflores051527@email.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Framework\\": "framework/",
+            "Framework\\Middleware\\": "framework/Middleware/",
+            "App\\": "app/"
+        }
+    }
+}
