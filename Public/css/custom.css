@@ -21,14 +21,14 @@
    ---------------------------------------------------------------- */
 
 :root {
-  --color-header:       #ddc778;   /* Header at navigation bar */
+  --color-header:       #2a6093;   /* Header at navigation bar */
   --color-accent:       #a29f44;   /* "Post a Job" button at mga highlight */
-  --color-accent-hover: #ddc778;   /* Hover state ng accent */
+  --color-accent-hover: #2a6093;   /* Hover state ng accent */
   --color-page-bg:      #f4f7f4;   /* Background ng buong page */
   --color-card-bg:      #ffffff;   /* Background ng mga card/box */
   --color-heading:      #1a2e1a;   /* Kulay ng mga title at heading */
   --color-body-text:    #2d3d2d;   /* Regular na body text */
-  --color-link:         #ddc778;   /* Mga clickable na links */
+  --color-link:         #2a6093;   /* Mga clickable na links */
   --color-link-hover:   #1b5e20;   /* Hover state ng links */
   --color-tag-bg:       #c8e6c9;   /* Background ng mga tag/badge */
   --color-tag-text:     #1b5e20;   /* Text ng mga tag/badge */

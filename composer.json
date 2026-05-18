@@ -9,9 +9,9 @@
     ],
     "autoload": {
         "psr-4": {
-            "Framework\\": "framework/",
-            "Framework\\Middleware\\": "framework/Middleware/",
-            "App\\": "app/"
+            "Framework\\": "Framework/",
+            "Framework\\Middleware\\": "Framework/Middleware/",
+            "App\\": "App/"
         }
     }
 }
